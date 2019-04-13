@@ -1,7 +1,8 @@
 let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the", "light", "of", "the", "moon"];
 
-function addExcitement(theWordArray) {
+function addExcitement(theWordArray, bang) {
   let buildMeUp = ""
+  if (bang === undefined) bang = "!";
 
   for (let i = 0; i < theWordArray.length; i++) {
     /*
@@ -13,7 +14,7 @@ function addExcitement(theWordArray) {
      */
     buildMeUp += theWordArray[i];
     if ((i + 1) % 3 === 0) {
-      buildMeUp += "! "
+      buildMeUp += bang + " "
     } else {
       buildMeUp += " "
     }
@@ -23,4 +24,4 @@ function addExcitement(theWordArray) {
 
 }
 
-addExcitement(sentence)
+addExcitement(sentence, "?")
